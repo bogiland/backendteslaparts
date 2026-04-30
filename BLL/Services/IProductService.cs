@@ -8,6 +8,6 @@ namespace TeslaStore.BLL.Services
         ProductDTO? GetProductById(int id);
         ProductDTO CreateProduct(ProductDTO productDto);
         void UpdateProduct(int id, ProductDTO productDto);
-        void DeleteProduct(int id);
+        void DeleteProduct(int id);                    
     }
 }
