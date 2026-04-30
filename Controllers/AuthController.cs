@@ -10,13 +10,13 @@ using TeslaStore.Models;
 namespace TeslaStore.Controllers
 {
     [ApiController]
-    [Route("api/[controller]")]
+    [Route("api/[controller]")]      
     public class AuthController : ControllerBase
     {
         private readonly UserManager<IdentityUser> _userManager;
         private readonly SignInManager<IdentityUser> _signInManager;
-        private readonly IConfiguration _configuration;
-
+        private readonly IConfiguration _configuration;   
+                                        
         public AuthController(
             UserManager<IdentityUser> userManager,
             SignInManager<IdentityUser> signInManager,
@@ -73,8 +73,8 @@ namespace TeslaStore.Controllers
             if (!result.Succeeded)
             {
                 return Unauthorized(new { message = "Invalid credentials" });
-            }
-
+            }                                        
+                    
             var user = await _userManager.FindByNameAsync(model.Username);
             if (user == null)
             {
@@ -93,14 +93,15 @@ namespace TeslaStore.Controllers
                 
                 await _userManager.AddToRoleAsync(user, defaultRole);
                 role = defaultRole;
-            }
-
+            }    
+                                        
+                                        
             var claims = new[]
             {
                 new Claim(ClaimTypes.Name, model.Username),
                 new Claim(ClaimTypes.Role, role)
             };
-
+                                        
             var key = new SymmetricSecurityKey(
                 Encoding.UTF8.GetBytes(_configuration["Jwt:Key"] ?? "default-secret-key"));
             var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
