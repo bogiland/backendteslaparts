@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
-namespace TeslaStore.Data
+namespace TeslaStore.Data      
 {
     public class AppDbContext : IdentityDbContext
     {
