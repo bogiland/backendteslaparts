@@ -1,5 +1,6 @@
 namespace TeslaStore.Constants
 {
+
     public static class RoleNames
     {
         
