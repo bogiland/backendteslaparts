@@ -5,8 +5,8 @@ namespace TeslaStore.BLL.DTOs
         public int Id { get; set; }
         public string? Name { get; set; }
         public decimal Price { get; set; }
-  
-        
+        public string? Category { get; set; }
+
         // Дополнительные поля для демонстрации бизнес-логики (поведения и вычислений)
         public string? FormattedPrice { get; set; }
         public bool IsPremium { get; set; }
