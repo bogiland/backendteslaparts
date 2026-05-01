@@ -74,7 +74,6 @@ namespace TeslaStore.BLL.Services
 
             _repository.Update(existingEntity);
         }
-j
 
 
         public void DeleteProduct(int id)
