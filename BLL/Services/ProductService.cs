@@ -64,7 +64,7 @@ namespace TeslaStore.BLL.Services
             }
 
             if (productDto.Price < 0)
-            {
+            {  
                 throw new ArgumentException("Цена товара не может быть отрицательной.");
             }
 
