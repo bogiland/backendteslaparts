@@ -79,15 +79,15 @@ namespace TeslaStore.Controllers
             {
                 var nextId = Orders.Count == 0 ? 1 : Orders.Max(existingOrder => existingOrder.Id) + 1;
                 order = new OrderModel
-                {
-                    Id = nextId,
+                { 
+                    Id = nextId, 
                     Username = username,
                     Items = items,
                     Total = items.Sum(item => item.Price * item.Quantity),
                     Status = "Ожидает",
                     CreatedAt = DateTime.UtcNow
                 };
-
+  
                 Orders.Add(order);
             }
    
