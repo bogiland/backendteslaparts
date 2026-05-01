@@ -77,7 +77,7 @@ namespace TeslaStore.BLL.Services
 jksnjksdnjsdjnjdsjnksvdkjnsdnjksvdnjkvdskjnsvdsnjkdsvjknvnksjknvdsjbvdshui
 
 
-vfjnkfdsnkjs
+vfjnkfdsn
 
         public void DeleteProduct(int id)
         {
