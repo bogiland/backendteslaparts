@@ -111,8 +111,7 @@ namespace TeslaStore.Controllers
                     return NotFound(new { message = "Order not found" });
                 }
 
-                order.Status = model.Status;
-                return Ok(order);
+               
             }
         }
     }
