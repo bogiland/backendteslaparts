@@ -73,6 +73,7 @@ namespace TeslaStore.Controllers
                 return BadRequest(new { message = "Корзина пуста." });
             }
 
+            
             OrderModel order;
             lock (OrdersLock)
             {
@@ -89,7 +90,7 @@ namespace TeslaStore.Controllers
 
                 Orders.Add(order);
             }
-
+   
             return CreatedAtAction(nameof(GetOrders), new { id = order.Id }, order);
         }
 
